@@ -1,0 +1,7 @@
+1.在生成图以后，在sess.run前，将图结构写到日志文件里：
+  writer = tf.summary.FileWriter('./graphs/log',sess.graph)
+在结束最后，需要writer.close()
+2.cd到保存的绝对路径，如本例子中，cd到graphs 
+J:/PYTHON/tensorflow/graphs>>tensorboard --logdir=log
+敲完，会输出一行地址
+3.用chrome打开输出的地址即可
